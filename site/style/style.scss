@@ -1,0 +1,827 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+$phone: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$l-desktop: 1200px;
+
+@mixin phone {
+  @media (min-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin l-desktop {
+  @media (min-width: #{$l-desktop}) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
+  position: fixed;
+  z-index: 5;
+
+  img {
+    width: 35px;
+    margin: 10px;
+
+    @include phone {
+      width: 40px;
+      margin: 5px 13px;
+    }
+    @include tablet {
+      width: 40px;
+      margin: 1px 15px;
+    }
+    @include desktop {
+      width: 43px;
+      margin: 0 18px;
+    }
+    @include l-desktop {
+      width: 45px;
+      margin: 0 25px;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    @include phone {
+      margin-right: 15px;
+    }
+    @include tablet {
+      margin-right: 35px;
+    }
+    @include desktop {
+      margin-right: 40px;
+    }
+    @include l-desktop {
+      margin-right: 60px;
+    }
+
+    li {
+      padding: 1em 0.8em;
+
+      @include phone {
+        padding: 1em 0.6em;
+      }
+      @include tablet {
+        padding: 1em 0.8em;
+      }
+      @include desktop {
+        padding: 1em 1em;
+      }
+      @include l-desktop {
+        padding: 1em 1.2em;
+      }
+
+      a {
+        color: #4361ee;
+        font-family: Asap, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        @include phone {
+          padding: 10px;
+          font-size: 1.1em;
+        }
+        @include tablet {
+          padding: 15px;
+          font-size: 1.2em;
+        }
+        @include desktop {
+          padding: 17px;
+          font-size: 1.3em;
+        }
+        @include l-desktop {
+          padding: 20px;
+          font-size: 1.4em;
+        }
+
+        &:hover {
+          border-bottom: 2px solid #4362eeb9;
+          padding-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    margin-top: -60px;
+
+    @include phone {
+      margin-top: -90px;
+    }
+    @include tablet {
+      margin-top: -130px;
+    }
+    @include desktop {
+      margin-top: -180px;
+    }
+    @include l-desktop {
+      margin-top: -250px;
+    }
+
+    h2 {
+      font-size: 4em;
+      font-weight: 900;
+      letter-spacing: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2px #4361ee;
+
+      @include phone {
+        font-size: 6em;
+      }
+      @include tablet {
+        font-size: 8em;
+      }
+      @include desktop {
+        font-size: 10em;
+      }
+      @include l-desktop {
+        font-size: 11em;
+      }
+    }
+
+    p {
+      font-family: Montserrat, sans-serif;
+      font-size: 2.5em;
+      font-weight: 900;
+      letter-spacing: 5px;
+      background: -webkit-linear-gradient(
+        47deg,
+        rgba(0, 255, 169, 1) 20%,
+        #4361ee 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 70px;
+      margin-top: -30px;
+
+      @include phone {
+        font-size: 3.5em;
+        padding-bottom: 25px;
+      }
+      @include tablet {
+        font-size: 4.5em;
+        padding-bottom: 40px;
+      }
+      @include desktop {
+        font-size: 5.5em;
+        margin-top: -100px;
+      }
+      @include l-desktop {
+        font-size: 5.6em;
+        padding-bottom: 60px;
+      }
+    }
+
+    .box {
+      width: 370px;
+      position: relative;
+      margin: 0px auto;
+
+      @include phone {
+        width: 450px;
+      }
+      @include tablet {
+        width: 550px;
+      }
+      @include desktop {
+        width: 800px;
+      }
+      @include l-desktop {
+        width: 1000px;
+      }
+
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: 900;
+        letter-spacing: 4px;
+        color: #4361ee;
+        text-transform: uppercase;
+
+        @include phone {
+          font-size: 4.5em;
+        }
+        @include tablet {
+          font-size: 5.5em;
+        }
+        @include desktop {
+          font-size: 7em;
+        }
+        @include l-desktop {
+          font-size: 9em;
+        }
+
+        &:nth-child(2) {
+          background: white;
+          -webkit-text-fill-color: white;
+          -webkit-text-stroke: 2px #4361ee;
+          overflow: hidden;
+          z-index: 2;
+          transition: 0.9s;
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+
+          &:hover {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+
+        &:nth-child(1):hover ~ h1 {
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+      }
+    }
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 350px;
+  height: 500px;
+
+  @include phone {
+    width: 450px;
+  }
+  @include desktop {
+    width: 650px;
+    height: 550px;
+  }
+  @include l-desktop {
+    width: 900px;
+  }
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 15em 2em;
+  transition: transform 4s;
+  transform-style: preserve-3d;
+
+  @include phone {
+    padding: 15.5em 2em;
+  }
+  @include desktop {
+    padding: 17em 2em;
+  }
+  @include l-desktop {
+    padding: 17.5em 2em;
+  }
+}
+
+.card:hover .card-content {
+  transform: rotateY(0.5turn);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include phone {
+    padding: 2.5em;
+  }
+  @include desktop {
+    padding: 2em;
+  }
+  @include l-desktop {
+    padding: 1.5em;
+  }
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.card-front::before {
+  content: "";
+  position: absolute;
+  padding: 14em 10em;
+  top: translateZ(50px);
+  bottom: translateZ(50px);
+  left: translateZ(50px);
+  right: translateZ(50px);
+  border: 3px solid #4361ee;
+  transform: translateZ(50px);
+
+  @include phone {
+    padding: 14em 13em;
+  }
+  @include desktop {
+    padding: 16em 18em;
+  }
+  @include l-desktop {
+    padding: 16em 26em;
+  }
+}
+
+.card-title {
+  font-size: 2em;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.4;
+  font-weight: 900;
+  letter-spacing: 10px;
+  transform: translateZ(100px);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #4361ee;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include phone {
+    font-size: 2.5em;
+  }
+  @include desktop {
+    font-size: 3.2em;
+  }
+  @include l-desktop {
+    font-size: 3.4em;
+    line-height: 1.8;
+  }
+}
+
+.card-p {
+  font-size: 1.1em;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  transform: translateZ(80px);
+  background: -webkit-linear-gradient(
+    47deg,
+    rgba(0, 255, 169, 1) 0%,
+    #4361ee 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include phone {
+    font-size: 1.4em;
+    padding-top: 20px;
+  }
+  @include desktop {
+    font-size: 1.6em;
+    padding-top: 60px;
+  }
+  @include l-desktop {
+    font-size: 1.9em;
+    padding-top: 50px;
+  }
+}
+
+.card-body {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 1em;
+  text-align: center;
+  color: white;
+  font-family: Mutka, sans-serif;
+
+  i {
+    font-weight: 900;
+  }
+
+  @include phone {
+    font-size: 1.3em;
+  }
+  @include desktop {
+    font-size: 1.5em;
+    padding: 2em;
+    line-height: 1.9;
+  }
+}
+
+.card-back {
+  transform: rotateY(0.5turn);
+  background: #4361ee;
+}
+
+#projects {
+  margin-top: 130px;
+  position: relative;
+
+  @include phone {
+    margin-top: 150px;
+  }
+  @include l-desktop {
+    margin-top: 190px;
+  }
+
+  .work-container {
+    margin-bottom: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include phone {
+      margin-bottom: 80px;
+    }
+    @include tablet {
+      margin-bottom: 90px;
+    }
+    @include desktop {
+      margin-bottom: 80px;
+    }
+
+    .h-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &:hover {
+        h2 {
+          background-color: white;
+          color: #4361ee;
+          transition: 2s;
+          &:nth-child(2) {
+            background-color: #4361ee;
+            color: white;
+            transition: 2s;
+          }
+        }
+      }
+
+      h2 {
+        font-family: Montserrat, sans-serif;
+        font-size: 3em;
+        font-weight: 900;
+        background-color: #4361ee;
+        color: white;
+        display: block;
+        padding: 0.1em 0.2em;
+        letter-spacing: 9px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include phone {
+          font-size: 4em;
+          letter-spacing: 12px;
+          padding: 0.15em 0.3em;
+        }
+        @include tablet {
+          font-size: 5em;
+          letter-spacing: 15px;
+        }
+        @include desktop {
+          font-size: 6em;
+        }
+        @include l-desktop {
+          font-size: 7em;
+        }
+
+        &:nth-child(2) {
+          position: absolute;
+          background-color: white;
+          color: #4361ee;
+          clip-path: inset(-1% -1% 50% -1%);
+        }
+      }
+    }
+  }
+
+  .hero {
+    margin: 0 auto;
+    padding: 0 1.5em;
+    @include l-desktop {
+      padding: 0 10em;
+      margin: 0 auto;
+    }
+    .egal-card {
+      .projects-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+          display: grid;
+          grid-gap: 40px;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .container-card {
+          margin-bottom: 40px;
+          font-size: 1.5em;
+          background: #4361ee;
+          padding: 1em;
+          width: 90%;
+          border-radius: 25px;
+          border: 3px solid #4361ee;
+          transition: 0.5s ease-in-out;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+            rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          display: flex;
+          flex-direction: column;
+
+          @include tablet {
+            width: 100%;
+            margin-bottom: 0;
+            height: 100%;
+          }
+
+          &:hover {
+            transform: translateY(-30px);
+            background: white;
+            h4 {
+              color: #00ffaa36;
+            }
+            h3 {
+              font-weight: 900;
+              -webkit-text-fill-color: white;
+              -webkit-text-stroke: 2px #4361ee;
+            }
+            a {
+              color: white;
+              background: linear-gradient(
+                29deg,
+                rgba(0, 255, 169, 1) 0%,
+                #4361ee 100%
+              );
+            }
+          }
+
+          h4 {
+            margin-top: -25px;
+            margin-bottom: -60px;
+            margin-right: -10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            font-size: 3em;
+            pointer-events: none;
+            font-weight: 900;
+            font-family: Quiksand, sans-serif;
+            color: white;
+          }
+
+          h3 {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Montserrat, sans-serif;
+            font-weight: 800;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+
+            @include phone {
+              font-size: 1.7em;
+              letter-spacing: 5px;
+            }
+            @include tablet {
+              letter-spacing: 7px;
+            }
+          }
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: transparent;
+            border: 2px solid white;
+            margin: 0 30px;
+            padding: 8px 0;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            font-size: 0.7em;
+
+            @include phone {
+              font-size: 0.8em;
+              padding: 10px;
+              margin: 0 140px;
+            }
+
+            @include tablet {
+              margin-top: auto;
+              margin: 0 40px;
+            }
+            @include l-desktop {
+              margin-top: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  #bg {
+    clip-path: polygon(0 20%, 100% 9%, 100% 80%, 0 90%);
+    background: linear-gradient(29deg, rgba(0, 255, 169, 1) 0%, #4361ee 100%);
+    width: 100%;
+    height: 520px;
+    position: absolute;
+    z-index: -2;
+
+    @include phone {
+      height: 480px;
+    }
+    @include tablet {
+      height: 390px;
+    }
+    @include desktop {
+      height: 400px;
+    }
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3.5em;
+    padding: 105px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    letter-spacing: 7px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+
+    @include phone {
+      font-size: 4em;
+    }
+    @include desktop {
+      font-size: 4.5em;
+    }
+    @include l-desktop {
+      font-size: 5em;
+    }
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+
+    @include phone {
+      flex-direction: row;
+      margin-top: -120px;
+    }
+    @include l-desktop {
+      margin-top: -160px;
+    }
+
+    a {
+      padding: 10px;
+      letter-spacing: 2px;
+      color: white;
+      font-size: 1.3em;
+      font-family: Roboto, sans-serif;
+      font-weight: 600;
+
+      @include phone {
+        padding: 25px;
+        font-size: 1.4em;
+        letter-spacing: 4px;
+      }
+
+      @include tablet {
+        font-size: 1.5em;
+      }
+      @include desktop {
+        font-size: 1.7em;
+      }
+      @include l-desktop {
+        font-size: 1.8em;
+        letter-spacing: 5px;
+        padding: 50px;
+      }
+
+      &:hover {
+        transform: rotateZ(-30px);
+        transform: translateY(-10px);
+        font-size: 1.8em;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb,
+          0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
+          0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+          0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+  @include phone {
+    margin-top: 120px;
+  }
+
+  p {
+    border-top: 1px solid #4362ee86;
+    padding-top: 15px;
+    color: #4361ee;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    @include phone {
+      font-size: 1.1em;
+    }
+  }
+}
