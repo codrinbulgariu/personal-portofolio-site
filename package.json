@@ -1,0 +1,23 @@
+{
+  "name": "Personal portofolio",
+  "version": "1.0.0",
+  "description": "",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codrinbulgariu/personal-portofolio-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codrinbulgariu/personal-portofolio-site/issues"
+  },
+  "homepage": "https://github.com/codrinbulgariu/personal-portofolio-site#readme",
+  "devDependencies": {
+    "parcel": "*"
+  }
+}
